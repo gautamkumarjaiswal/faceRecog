@@ -1,7 +1,7 @@
 # faceRecog
 Real time face recognition using Python
 
-                                          INSTALLATION INSTRUCTION TO RUN FACE RECOGNITION IN REAL-TIME
+           INSTALLATION INSTRUCTION TO RUN FACE RECOGNITION IN REAL-TIME
 
 
 NOTE: WE WILL CREATE VIRTUAL ENVIRONMENT AND INSTALL ALL DEPENDENCIES IN THAT SO THAT IT WILL NOT CHANGE/AFFECT YOUR ROOT DIRECTORY, JUST BY DELETEING THIS FOLDER YOU CAN DELETE ITS EXISTANCE.
@@ -52,21 +52,28 @@ At this time if you open 'faceRecog' folder it would contains some files and fol
 Before testing script there are few points to keep in mind
 
 (a) Application can recognize person only if it can see face of subject. It may fail with side face or partial face.
+
 (b) As we are training model with only one image, make sure atleast this image if of good quality (not too noisy or blured)
-(c) Acuracy of recognition can be improved if we train model with more and more images.
-(d) Application can also detect multiple faces in a frame, for that please train model with images of your friends and use webcam to recognize them. However, it 
-    can also detect face in mobile phone, be sure that you are not getting reflection at mobilephone screen and face shown in mobile screen is large enough to recognize.
-    Otherwise system accuracy will decrease with small faces.
+
+(c) Acuracy of recognition can be improved if we train model with more and more images (Keep atleast 8-10 images of each subject).
+
+(d) Application can also detect multiple faces in a frame, for that please train model with images of your friends and use webcam to recognize them. However, it can also detect face in mobile phone, be sure that you are not getting reflection at mobilephone screen and face shown in mobile screen is large enough to recognize. Otherwise system accuracy will decrease with small faces.
+
 
 ==========To test model =====================
 
 To recognize face from image-----------
+
+
 13) (env) C:\faceRecog>python recognize_faces_image.py --encodings encodings.pickle --image examples/obama.jpg
 (NOTE: Make sure the image you want to test is present in 'examples' folder)
 
 
 To recognize face from webcam-----------
+
 if you want to identify face using webcam then issue following command in cmd window
+
+
 14)(env) C:\faceRecog>python recognize_faces_video.py --encodings encodings.pickle
 
 
@@ -80,6 +87,7 @@ this will save output video in folder named 'output'.
 
 
 ==========To re-train model with own database =====================
+
 16)(env) C:\faceRecog>python encode_faces.py --dataset dataset --encodings encodings.pickle
 
 
